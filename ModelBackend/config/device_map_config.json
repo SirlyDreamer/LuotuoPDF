@@ -1,0 +1,39 @@
+{
+    "decapoda-research/llama-7b-hf": {
+        "top_layer": "model",
+        "layer_name": "layers",
+        "device_map": {
+            "": "cuda:0",
+            "model.embed_tokens": "cuda:0",
+            "model.norm": "cuda:0",
+            "lm_head": "cuda:0"
+        },
+        "total_layers": 34,
+        "layers": 32
+    },
+    "THUDM/chatglm-6b": {
+        "top_layer": "transformer",
+        "layer_name": "layers",
+        "device_map": {
+            "": "cuda:0",
+            "transformer.word_embeddings": "cuda:0",
+            "transformer.final_layernorm": "cuda:0",
+            "lm_head": "cuda:0"
+        },
+        "total_layers": 30,
+        "layers": 28
+    },
+    "fnlp/moss-moon-003-sft": {
+        "top_layer": "transformer",
+        "layer_name": "h",
+        "device_map": {
+            "": "cuda:0",
+            "transformer.wte": "cuad:0",
+            "transformer.drop": "cuda:0",
+            "transformer.ln_f": "cuda:0",
+            "lm_head": "cuda:0"
+        },
+        "total_layers": 37,
+        "layers": 34
+    }
+}
